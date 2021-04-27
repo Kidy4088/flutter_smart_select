@@ -1631,6 +1631,7 @@ abstract class S2State<T> extends State<SmartSelect<T>> {
       limit: choiceConfig.pageLimit,
       delay: choiceConfig.delay,
     )..addListener(_choicesHandler);
+    choices!.initialize();
   }
 
   /// Function to initialize filter
