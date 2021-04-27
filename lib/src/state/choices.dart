@@ -44,13 +44,11 @@ class S2Choices<T> extends ChangeNotifier {
 
   /// Default constructor
   S2Choices({
-    this.items,
+    List<S2Choice<T>>? items,
     this.loader,
     this.delay,
     this.limit,
-  }) {
-    this.preload = items;
-  }
+  }) : this.preload = items;
 
   /// Returns values of the choice items
   List<T> get values {
